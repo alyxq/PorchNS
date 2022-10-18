@@ -1,18 +1,17 @@
-<savedcsvimport scriptid="custimport_18_4866942_897">
+<savedcsvimport scriptid="custimport_27_4866942_897">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
   <datahandling>ADDUPDATE</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import journal entries.</description>
+  <description>FF Starter - Use this mapping to import the chart of accounts.</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Journal Entry Import Mapping</importname>
+  <importname>Chart of Accounts Import Mapping</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <recordtype>ACCOUNT</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -20,156 +19,159 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>F</ispublic>
+    <ispublic>T</ispublic>
     <roles/>
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>ACCOUNT</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>ACCOUNT</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>ACCTNAME</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>acctname</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>ACCTNUMBER</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
+            <column>acctnumber</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>POSTINGPERIOD</field>
+          <field>ACCTTYPE</field>
           <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
+            <column>accttype</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDATE</field>
+          <field>CASHFLOWRATE</field>
           <columnreference>
-            <column>reversalDate</column>
-            <file>JOURNALENTRY</file>
+            <column>cashflowrate</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDEFER</field>
+          <field>CATEGORY1099MISC</field>
           <columnreference>
-            <column>isDeferred</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>SUBSIDIARY</field>
-          <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANDATE</field>
-          <columnreference>
-            <column>tranDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANID</field>
-          <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>ACCOUNT</field>
-          <columnreference>
-            <column>journalItemLine_accountRef</column>
-            <file>JOURNALENTRY</file>
+            <column>category1099misc</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>CLASS</field>
           <columnreference>
-            <column>journalItemLine_classRef</column>
-            <file>JOURNALENTRY</file>
+            <column>class</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CREDIT</field>
+          <field>CURRENCY</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>DEBIT</field>
-          <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>currency</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>DEPARTMENT</field>
           <columnreference>
-            <column>journalItemLine_departmentRef</column>
-            <file>JOURNALENTRY</file>
+            <column>department</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ENTITY</field>
+          <field>DESCRIPTION</field>
           <columnreference>
-            <column>journalItemLine_entityRef</column>
-            <file>JOURNALENTRY</file>
+            <column>description</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>externalid</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>GENERALRATE</field>
+          <columnreference>
+            <column>generalrate</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>INCLUDECHILDREN</field>
+          <columnreference>
+            <column>includeChildren</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ISINACTIVE</field>
+          <columnreference>
+            <column>isInactive</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>LOCATION</field>
           <columnreference>
-            <column>journalItemLine_locationRef</column>
-            <file>JOURNALENTRY</file>
+            <column>location</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TAX1AMT</field>
+          <field>PARENT</field>
           <columnreference>
-            <column>journalItemLine_taxCodeAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>parent</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TAXCODE</field>
+          <field>REVALUE</field>
           <columnreference>
-            <column>journalItemLine_taxCodeRef</column>
-            <file>JOURNALENTRY</file>
+            <column>revalue</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <columnreference>
+            <column>subsidiaries</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>trandate</column>
+            <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

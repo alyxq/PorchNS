@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_18_4866942_897">
+<savedcsvimport scriptid="custimport_topside_je_pd">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import journal entries.</description>
+  <description>This is to be used for uploading the topside advanced intercompany JEs for Jan, Feb and Mar of 2021</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Journal Entry Import Mapping</importname>
+  <importname>Top Side Advanced Intercompany JE Entry for Re-Launch</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <recordtype>ADVINTERCOMPANYJOURNALENTRY</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
+  <transactionform>[scriptid=custform_porch_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -25,151 +25,139 @@
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>ADVINTERCOMPANYJOURNALENTRY</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>CURRENCY</field>
-          <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>EXCHANGERATE</field>
-          <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>POSTINGPERIOD</field>
-          <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>REVERSALDATE</field>
-          <columnreference>
-            <column>reversalDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>REVERSALDEFER</field>
-          <columnreference>
-            <column>isDeferred</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>SUBSIDIARY</field>
-          <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANDATE</field>
-          <columnreference>
-            <column>tranDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANID</field>
-          <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
+      <record>ADVINTERCOMPANYJOURNALENTRY:LINE</record>
       <fieldmappings>
         <fieldmapping>
           <field>ACCOUNT</field>
           <columnreference>
-            <column>journalItemLine_accountRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Account</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>CLASS</field>
           <columnreference>
-            <column>journalItemLine_classRef</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
+            <column>Product Line</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>CREDIT</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Credit</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>DEBIT</field>
           <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Debit</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>DEPARTMENT</field>
           <columnreference>
-            <column>journalItemLine_departmentRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Department</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LINESUBSIDIARY</field>
+          <columnreference>
+            <column>Line Subsidiary</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Memo Desc (line memo)</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>ADVINTERCOMPANYJOURNALENTRY</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[scriptid=custbody_nsts_gaw_tran_requestor]</field>
+          <columnreference>
+            <column>Requestor</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ENTITY</field>
+          <field>EXTERNALID</field>
           <columnreference>
-            <column>journalItemLine_entityRef</column>
-            <file>JOURNALENTRY</file>
+            <column>External ID</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>LOCATION</field>
+          <field>MEMO</field>
           <columnreference>
-            <column>journalItemLine_locationRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Memo</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TAX1AMT</field>
+          <field>PERFORMAUTOBALANCE</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>POSTINGPERIOD</field>
           <columnreference>
-            <column>journalItemLine_taxCodeAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Posting Period</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TAXCODE</field>
+          <field>REVERSALDATE</field>
           <columnreference>
-            <column>journalItemLine_taxCodeRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Reversal Date</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>REVERSALDEFER</field>
+          <columnreference>
+            <column>Defer Entry</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <columnreference>
+            <column>Subsidiary</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Posting Date</column>
+            <file>ADVINTERCOMPANYJOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_20_4866942_897">
+<savedcsvimport scriptid="custimportporch_vend_bill_bulk_imp_js">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import trial balance by month for previous year(s).</description>
+  <description>Importing vendor bills in bulk</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Historical Trial Balance (Consol.) Import Mapping</importname>
+  <importname>Porch_Vend_Bill_Bulk_Imp</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <recordtype>VENDORBILL</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
+  <transactionform>[scriptid=custform_porch_vendor_bill]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -20,132 +20,140 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>F</ispublic>
+    <ispublic>T</ispublic>
     <roles/>
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>VENDORBILL</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>VENDORBILL</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>[scriptid=custbody_auto_approve]</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_nsts_gaw_tran_requestor]</field>
+          <value>462869</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_svb_vb_to_bell_dist_sched]</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>Distribution Schedule</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>[scriptid=custbodyvend_bill_date_js]</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>MEMO</field>
-          <columnreference>
-            <column>memo</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>POSTINGPERIOD</field>
-          <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>REVERSALDATE</field>
-          <columnreference>
-            <column>reversalDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>SUBSIDIARY</field>
-          <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANDATE</field>
-          <columnreference>
-            <column>trandate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANID</field>
-          <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>ACCOUNT</field>
-          <columnreference>
-            <column>journalItemLine_account</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>CLASS</field>
-          <columnreference>
-            <column>journalItemLine_class</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>CREDIT</field>
-          <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>DEBIT</field>
-          <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Vendor Bill Date</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>DEPARTMENT</field>
           <columnreference>
-            <column>journalItemLine_department</column>
-            <file>JOURNALENTRY</file>
+            <column>Department External ID</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DUEDATE</field>
+          <columnreference>
+            <column>Due Date</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>LOCATION</field>
+          <field>ENTITY</field>
           <columnreference>
-            <column>journalItemLine_location</column>
-            <file>JOURNALENTRY</file>
+            <column>Vendor ID</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Memo</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Posting Date</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANID</field>
+          <columnreference>
+            <column>Vendor Ref No.</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>VENDORBILL:EXPENSE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ACCOUNT</field>
+          <columnreference>
+            <column>Account Line External ID</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Amount</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CLASS</field>
+          <columnreference>
+            <column>Product Line</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <columnreference>
+            <column>Department Line External ID</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Line Description Memo</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

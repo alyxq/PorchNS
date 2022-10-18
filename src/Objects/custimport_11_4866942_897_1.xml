@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_2_4866942_897">
+<savedcsvimport scriptid="custimport_11_4866942_897_1">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import this year's trial balance by month up to go-live date.</description>
+  <description>Modified import mapping for cut-over activity</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Trial Balance at Go-Live (Consol.) Import Mapping</importname>
+  <importname>Open Vendor Bills (Open AP)</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <recordtype>VENDORBILL</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
+  <transactionform>[scriptid=custform_porch_vendor_bill]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -25,111 +25,115 @@
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>VENDORBILL</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>VENDORBILL</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>CLASS</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>Class</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>[scriptid=custbody_nsts_gaw_tran_requestor]</field>
+          <value>8294</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
+            <column>Department ext.</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DUEDATE</field>
+          <columnreference>
+            <column>Due Date</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ID</field>
+          <field>ENTITY</field>
           <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
+            <column>Vendor ext.</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>ExternalID</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Memo</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>POSTINGPERIOD</field>
           <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>SUBSIDIARY</field>
-          <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
+            <column>Posting Period</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>TRANDATE</field>
           <columnreference>
-            <column>trandate</column>
-            <file>JOURNALENTRY</file>
+            <column>Date</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANID</field>
+          <columnreference>
+            <column>Reference No.</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>
     <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
+      <record>VENDORBILL:EXPENSE</record>
       <fieldmappings>
         <fieldmapping>
           <field>ACCOUNT</field>
           <columnreference>
-            <column>journalItemLine_account</column>
-            <file>JOURNALENTRY</file>
+            <column>Account ext.</column>
+            <file>VENDORBILL</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Amount</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CLASS</field>
+          <field>MEMO</field>
           <columnreference>
-            <column>journalItemLine_class</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>CREDIT</field>
-          <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>DEBIT</field>
-          <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>DEPARTMENT</field>
-          <columnreference>
-            <column>journalItemLine_department</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>LOCATION</field>
-          <columnreference>
-            <column>journalItemLine_location</column>
-            <file>JOURNALENTRY</file>
+            <column>Line Description Memo</column>
+            <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

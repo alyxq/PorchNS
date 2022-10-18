@@ -1,0 +1,79 @@
+<savedcsvimport scriptid="custimport_csv_broker_header_mapping">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <customrecord>[scriptid=customrecord_stg_integraton_mapping]</customrecord>
+  <datahandling>ADDUPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>CSV Broker mappings between the header of a CSV import to a Saved CSV Import.</description>
+  <entryform>[scriptid=custform_15_4125731_523]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>DO NOT MODIFY: CSV Broker Header Mappings</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles>[scriptid=customrole_porch_csv_integrator]</roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[scriptid=customrecord_stg_integraton_mapping.custrecord_stg_integraton_header_format]</field>
+          <columnreference>
+            <column>CSV Header Format</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_stg_integraton_mapping.custrecord_tsg_integration_mapid]</field>
+          <columnreference>
+            <column>Mapping Id</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_stg_integraton_mapping.custrecord_tsg_integraton_primaryid]</field>
+          <columnreference>
+            <column>Primary Id</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External Id</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>Name</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

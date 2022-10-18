@@ -1,0 +1,103 @@
+<savedcsvimport scriptid="custimportporch_vend_prefd_bu_d_js">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADDUPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>Update the preferred BU and Dept as well as Default Exp and Payables.</description>
+  <entryform>[scriptid=custform_porch_vendor]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Porch_Vend_Update_Prfd_BU_D</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>VENDOR</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles/>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>VENDOR</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>VENDOR</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>CATEGORY</field>
+          <columnreference>
+            <column>Category</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_ven_distro]</field>
+          <columnreference>
+            <column>Prefered Distribution Schedule</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_ven_pref_bu]</field>
+          <columnreference>
+            <column>Preferred Business Unit Internal ID</column>
+            <file>VENDOR</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_ven_pref_department]</field>
+          <columnreference>
+            <column>Preferred Department Internal ID</column>
+            <file>VENDOR</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITYID</field>
+          <columnreference>
+            <column>Vendor ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXPENSEACCOUNT</field>
+          <columnreference>
+            <column>Default Expense Account External ID</column>
+            <file>VENDOR</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PAYABLESACCOUNT</field>
+          <columnreference>
+            <column>Default Payables Account External ID</column>
+            <file>VENDOR</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

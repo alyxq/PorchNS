@@ -1,0 +1,62 @@
+<savedcsvimport scriptid="custimportporch_app_limit">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>This is for updating employee's VB approval limit</description>
+  <entryform>[scriptid=custform_porch_employee]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Porch Manager Approval Limit</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>EMPLOYEE</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles/>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>EMPLOYEE</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>EMPLOYEE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_vb_limit]</field>
+          <columnreference>
+            <column>Vendor Bill Limit</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ID</field>
+          <columnreference>
+            <column>Internal ID</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

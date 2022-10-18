@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_18_4866942_897">
-  <charencoding>windows-1252</charencoding>
+<savedcsvimport scriptid="custimport_csv_broker_one_way_je">
+  <charencoding>UTF_8</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import journal entries.</description>
+  <description>For CSV uploader.</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Journal Entry Import Mapping</importname>
+  <importname>DO NOT MODIFY - One Way Journal CSV Importer</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
   <recordtype>JOURNALENTRY</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
+  <transactionform>[scriptid=custform_porch_interco_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -21,7 +21,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>F</ispublic>
-    <roles/>
+    <roles>[scriptid=customrole_porch_csv_integrator]</roles>
   </audience>
   <filemappings>
     <filemapping>
@@ -33,25 +33,17 @@
       <record>JOURNALENTRY</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>EXTERNALID</field>
           <columnreference>
-            <column>currency</column>
+            <column>External ID</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>MEMO</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>POSTINGPERIOD</field>
-          <columnreference>
-            <column>postingperiod</column>
+            <column>Header Memo</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -59,7 +51,7 @@
         <fieldmapping>
           <field>REVERSALDATE</field>
           <columnreference>
-            <column>reversalDate</column>
+            <column>Reversal Date</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -67,7 +59,7 @@
         <fieldmapping>
           <field>REVERSALDEFER</field>
           <columnreference>
-            <column>isDeferred</column>
+            <column>Defer Entry</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -75,23 +67,23 @@
         <fieldmapping>
           <field>SUBSIDIARY</field>
           <columnreference>
-            <column>subsidiary</column>
+            <column>Subsidiary Internal ID</column>
             <file>JOURNALENTRY</file>
-            <type>NAME</type>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TOSUBSIDIARY</field>
+          <columnreference>
+            <column>To Subsidiary Internal ID</column>
+            <file>JOURNALENTRY</file>
+            <type>INTERNAL_ID</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>TRANDATE</field>
           <columnreference>
-            <column>tranDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANID</field>
-          <columnreference>
-            <column>tranId</column>
+            <column>Posting Date</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -104,23 +96,23 @@
         <fieldmapping>
           <field>ACCOUNT</field>
           <columnreference>
-            <column>journalItemLine_accountRef</column>
+            <column>Account External ID</column>
             <file>JOURNALENTRY</file>
-            <type>NAME</type>
+            <type>EXTERNAL_ID</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>CLASS</field>
           <columnreference>
-            <column>journalItemLine_classRef</column>
+            <column>Product Line External ID</column>
             <file>JOURNALENTRY</file>
-            <type>NAME</type>
+            <type>EXTERNAL_ID</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>CREDIT</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
+            <column>Credit</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -128,7 +120,7 @@
         <fieldmapping>
           <field>DEBIT</field>
           <columnreference>
-            <column>journalItemLine_debitAmount</column>
+            <column>Debit</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -136,7 +128,15 @@
         <fieldmapping>
           <field>DEPARTMENT</field>
           <columnreference>
-            <column>journalItemLine_departmentRef</column>
+            <column>Department External ID</column>
+            <file>JOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ELIMINATE</field>
+          <columnreference>
+            <column>Eliminate</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
@@ -144,31 +144,15 @@
         <fieldmapping>
           <field>ENTITY</field>
           <columnreference>
-            <column>journalItemLine_entityRef</column>
+            <column>Name</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>LOCATION</field>
+          <field>MEMO</field>
           <columnreference>
-            <column>journalItemLine_locationRef</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TAX1AMT</field>
-          <columnreference>
-            <column>journalItemLine_taxCodeAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TAXCODE</field>
-          <columnreference>
-            <column>journalItemLine_taxCodeRef</column>
+            <column>Line Memo</column>
             <file>JOURNALENTRY</file>
             <type>NAME</type>
           </columnreference>

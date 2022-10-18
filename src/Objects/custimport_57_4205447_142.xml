@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_18_4866942_897">
+<savedcsvimport scriptid="custimport_57_4205447_142">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import journal entries.</description>
+  <entryform>STANDARDCONTACTFORM</entryform>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Journal Entry Import Mapping</importname>
+  <importname>Contacts Import</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>CONTACT</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -25,151 +25,172 @@
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>CONTACT</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>CONTACT:ADDRESSBOOK:ADDRESSBOOKADDRESS</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>ADDR1</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_line1</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>ADDR2</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_line2</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>POSTINGPERIOD</field>
+          <field>ADDRESSEE</field>
           <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_addressee</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDATE</field>
+          <field>ADDRPHONE</field>
           <columnreference>
-            <column>reversalDate</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_phone</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDEFER</field>
+          <field>ATTENTION</field>
           <columnreference>
-            <column>isDeferred</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_attention</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>SUBSIDIARY</field>
+          <field>CITY</field>
           <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_city</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TRANDATE</field>
+          <field>COUNTRY</field>
           <columnreference>
-            <column>tranDate</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_country</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TRANID</field>
+          <field>STATE</field>
           <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_state</column>
+            <file>CONTACT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ZIP</field>
+          <columnreference>
+            <column>address1_zipCode</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>
     <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
+      <record>CONTACT:ADDRESSBOOK</record>
       <fieldmappings>
         <fieldmapping>
-          <field>ACCOUNT</field>
+          <field>DEFAULTBILLING</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LABEL</field>
           <columnreference>
-            <column>journalItemLine_accountRef</column>
-            <file>JOURNALENTRY</file>
+            <column>address1_addressName</column>
+            <file>CONTACT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CONTACT</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>COMPANY</field>
+          <columnreference>
+            <column>company</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CLASS</field>
+          <field>EMAIL</field>
           <columnreference>
-            <column>journalItemLine_classRef</column>
-            <file>JOURNALENTRY</file>
+            <column>email</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CREDIT</field>
+          <field>ENTITYID</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>entityId</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEBIT</field>
+          <field>EXTERNALID</field>
           <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>externalId</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEPARTMENT</field>
+          <field>FIRSTNAME</field>
           <columnreference>
-            <column>journalItemLine_departmentRef</column>
-            <file>JOURNALENTRY</file>
+            <column>firstName</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ENTITY</field>
+          <field>LASTNAME</field>
           <columnreference>
-            <column>journalItemLine_entityRef</column>
-            <file>JOURNALENTRY</file>
+            <column>lastName</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>LOCATION</field>
+          <field>PHONE</field>
           <columnreference>
-            <column>journalItemLine_locationRef</column>
-            <file>JOURNALENTRY</file>
+            <column>phone</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TAX1AMT</field>
-          <columnreference>
-            <column>journalItemLine_taxCodeAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
+          <field>SUBSIDIARY</field>
+          <value>1</value>
         </fieldmapping>
         <fieldmapping>
-          <field>TAXCODE</field>
+          <field>TITLE</field>
           <columnreference>
-            <column>journalItemLine_taxCodeRef</column>
-            <file>JOURNALENTRY</file>
+            <column>title</column>
+            <file>CONTACT</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

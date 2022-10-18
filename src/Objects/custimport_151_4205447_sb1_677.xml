@@ -1,18 +1,18 @@
-<savedcsvimport scriptid="custimport_18_4866942_897">
+<savedcsvimport scriptid="custimport_151_4205447_sb1_677">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import journal entries.</description>
+  <entryform>[scriptid=custform_porch_customer]</entryform>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Journal Entry Import Mapping</importname>
+  <importname>Rynoh - Customer Import (E78)</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>CUSTOMER</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -25,153 +25,150 @@
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>CUSTOMER</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>CUSTOMER</record>
       <fieldmappings>
         <fieldmapping>
+          <field>COMPANYNAME</field>
+          <columnreference>
+            <column>Company Name</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
           <field>CURRENCY</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EMAIL</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>Email</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>ENTITYID</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
+            <column>Customer ID</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>POSTINGPERIOD</field>
+          <field>ENTITYSTATUS</field>
+          <value>13</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
           <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
+            <column>ExternalID</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDATE</field>
-          <columnreference>
-            <column>reversalDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
+          <field>ISPERSON</field>
+          <value>F</value>
         </fieldmapping>
         <fieldmapping>
-          <field>REVERSALDEFER</field>
+          <field>PHONE</field>
           <columnreference>
-            <column>isDeferred</column>
-            <file>JOURNALENTRY</file>
+            <column>Phone</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>SUBSIDIARY</field>
+          <value>34</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TAXABLE</field>
           <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
+            <column>Taxable</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TRANDATE</field>
+          <field>TERMS</field>
           <columnreference>
-            <column>tranDate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TRANID</field>
-          <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
+            <column>Terms</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>
     <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
+      <record>CUSTOMER:ADDRESSBOOK:ADDRESSBOOKADDRESS</record>
       <fieldmappings>
         <fieldmapping>
-          <field>ACCOUNT</field>
+          <field>ADDR1</field>
           <columnreference>
-            <column>journalItemLine_accountRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Address 1</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CLASS</field>
+          <field>ADDR2</field>
           <columnreference>
-            <column>journalItemLine_classRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Address 2</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CREDIT</field>
+          <field>CITY</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>City</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEBIT</field>
+          <field>COUNTRY</field>
           <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Country</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEPARTMENT</field>
+          <field>STATE</field>
           <columnreference>
-            <column>journalItemLine_departmentRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Province/State</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ENTITY</field>
+          <field>ZIP</field>
           <columnreference>
-            <column>journalItemLine_entityRef</column>
-            <file>JOURNALENTRY</file>
+            <column>Postal Code/Zip</column>
+            <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CUSTOMER:ADDRESSBOOK</record>
+      <fieldmappings>
         <fieldmapping>
-          <field>LOCATION</field>
-          <columnreference>
-            <column>journalItemLine_locationRef</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
+          <field>DEFAULTBILLING</field>
+          <value>T</value>
         </fieldmapping>
         <fieldmapping>
-          <field>TAX1AMT</field>
-          <columnreference>
-            <column>journalItemLine_taxCodeAmount</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>TAXCODE</field>
-          <columnreference>
-            <column>journalItemLine_taxCodeRef</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
+          <field>DEFAULTSHIPPING</field>
+          <value>F</value>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>
