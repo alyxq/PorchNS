@@ -1,18 +1,17 @@
-<savedcsvimport scriptid="custimport_2_4866942_897">
+<savedcsvimport scriptid="custimport_116_4205447_226">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <customrecord>[scriptid=customrecord_ncfar_asset]</customrecord>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import this year&apos;s trial balance by month up to go-live date.</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Trial Balance at Go-Live (Consol.) Import Mapping</importname>
+  <importname>ACS FAM Asset</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>JOURNALENTRY</recordtype>
+  <recordtype>CUSTOMRECORD</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>[scriptid=custform_atlas_ff_em_amort_je]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -20,116 +19,107 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>F</ispublic>
+    <ispublic>T</ispublic>
     <roles></roles>
   </audience>
   <filemappings>
     <filemapping>
-      <file>JOURNALENTRY</file>
+      <file>CUSTOMRECORD</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>JOURNALENTRY</record>
+      <record>CUSTOMRECORD</record>
       <fieldmappings>
         <fieldmapping>
-          <field>CURRENCY</field>
+          <field>ALTNAME</field>
           <columnreference>
-            <column>currency</column>
-            <file>JOURNALENTRY</file>
+            <column>Name</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXCHANGERATE</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetbookvalue]</field>
           <columnreference>
-            <column>exchangerate</column>
-            <file>JOURNALENTRY</file>
+            <column>Current Net Book Value</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ID</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetcost]</field>
           <columnreference>
-            <column>tranId</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Original Cost</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>POSTINGPERIOD</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetcurrentcost]</field>
           <columnreference>
-            <column>postingperiod</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Current Cost</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>SUBSIDIARY</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdescr]</field>
           <columnreference>
-            <column>subsidiary</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Description</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>TRANDATE</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlastdepramt]</field>
           <columnreference>
-            <column>trandate</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>JOURNALENTRY:LINE</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>ACCOUNT</field>
-          <columnreference>
-            <column>journalItemLine_account</column>
-            <file>JOURNALENTRY</file>
+            <column>Last Depreciation Amount</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CLASS</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlastdeprdate]</field>
           <columnreference>
-            <column>journalItemLine_class</column>
-            <file>JOURNALENTRY</file>
+            <column>Last Depreciation Date</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CREDIT</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlifetime]</field>
           <columnreference>
-            <column>journalItemLine_creditAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Lifetime</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEBIT</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetresidualvalue]</field>
+          <value>0.00</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetstatus]</field>
           <columnreference>
-            <column>journalItemLine_debitAmount</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Status</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>DEPARTMENT</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assettype]</field>
           <columnreference>
-            <column>journalItemLine_department</column>
-            <file>JOURNALENTRY</file>
+            <column>Asset Type</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>LOCATION</field>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_ncfar_quantity]</field>
           <columnreference>
-            <column>journalItemLine_location</column>
-            <file>JOURNALENTRY</file>
+            <column>Quantity</column>
+            <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

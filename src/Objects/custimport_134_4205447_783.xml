@@ -1,0 +1,166 @@
+<savedcsvimport scriptid="custimport_134_4205447_783">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <customrecord>[scriptid=customrecord_laa_lease]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <entryform>[scriptid=custform_laa_lease]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Lease Header Import</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ALTNAME</field>
+          <columnreference>
+            <column>Lease Name</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_classification]</field>
+          <columnreference>
+            <column>Lease Classification</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_commencement_date]</field>
+          <columnreference>
+            <column>Commencement Date</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_currency]</field>
+          <columnreference>
+            <column>Currency</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_department]</field>
+          <columnreference>
+            <column>Department Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_inc_borrowing_rate]</field>
+          <columnreference>
+            <column>Incremental Borrowing Rate %</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_initial_direct_costs]</field>
+          <columnreference>
+            <column>Initial Direct Costs</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_initial_payment_amount]</field>
+          <columnreference>
+            <column>Initial Payment Amount</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_lease_incentives]</field>
+          <columnreference>
+            <column>Lease Incentives</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_lease_prepaid_pmt]</field>
+          <columnreference>
+            <column>Prepaid Lease Payment</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_status]</field>
+          <columnreference>
+            <column>Status</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_subsidiary]</field>
+          <columnreference>
+            <column>Subsidiary Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_term]</field>
+          <columnreference>
+            <column>Lease Term (Months)</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_type]</field>
+          <columnreference>
+            <column>Lease Type</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_laa_lease.custrecord_laa_ls_vendor]</field>
+          <columnreference>
+            <column>Vendor</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>Lease ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>
