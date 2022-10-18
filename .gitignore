@@ -1,1 +1,6 @@
 .DS_Store
+node_modules/
+suitecloud.config.js
+package-lock.json
+project.json
+
