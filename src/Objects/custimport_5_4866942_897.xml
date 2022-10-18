@@ -11,7 +11,7 @@
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
   <recordtype>SERVICEPURCHASEITEM</recordtype>
-  <runserversuitescript>F</runserversuitescript>
+  <runserversuitescript>T</runserversuitescript>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -20,7 +20,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>T</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

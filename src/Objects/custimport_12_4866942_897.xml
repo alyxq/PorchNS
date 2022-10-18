@@ -11,7 +11,7 @@
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
   <recordtype>INVOICE</recordtype>
-  <runserversuitescript>F</runserversuitescript>
+  <runserversuitescript>T</runserversuitescript>
   <transactionform>[scriptid=custform_porch_cash_refund]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
@@ -21,7 +21,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>T</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

@@ -4,9 +4,136 @@
   <dependencies>
     <features>
       <feature required="true">BUSINESS</feature>
+      <feature required="true">CLASSES</feature>
+      <feature required="true">LOCATIONS</feature>
+      <feature required="true">PAYABLES</feature>
+      <feature required="true">DEPARTMENTS</feature>
+      <feature required="true">ACCOUNTING</feature>
+      <feature required="true">PURCHASEORDERS</feature>
+      <feature required="true">INVENTORY</feature>
+      <feature required="true">EXPREPORTS</feature>
+      <feature required="true">SALESORDERS</feature>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="true">SUBSIDIARIES</feature>
+      <feature required="true">RECEIVABLES</feature>
     </features>
     <objects>
+      <object>customrecord_ncfar_asset.custrecord_assetlastdepramt</object>
+      <object>custbody_auto_approve</object>
       <object>custform_atlas_ff_em_amort_je</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdepracc</object>
+      <object>custform_atlas_ff_em_vendor</object>
+      <object>custentity_customer_number</object>
+      <object>custrecord_porch_bu_123</object>
+      <object>customrecord_ncfar_asset.custrecord_assetcost</object>
+      <object>custform_atlas_ff_em_noninventory</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_entity_bank_acct_type</object>
+      <object>customrecord_ncfar_asset.custrecord_assetcurrentage</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_inc_borrowing_rate</object>
+      <object>customrecord_ncfar_asset.custrecord_assetlifetime</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_commencement_date</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistdate</object>
+      <object>custform_porch_je</object>
+      <object>customrecord_mapper_values.custrecord_mapper_value_category</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_currency</object>
+      <object>customrecord_stg_integraton_mapping.custrecord_tsg_integraton_primaryid</object>
+      <object>custbody_cash_sale_report_id</object>
+      <object>custform_porch_check</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistcurrentage</object>
+      <object>custform_porch_bill_payment</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdepartment</object>
+      <object>custbody7</object>
+      <object>custform_atlas_ff_em_inventory</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_department</object>
+      <object>customrecord_stg_integraton_mapping.custrecord_stg_integraton_header_format</object>
+      <object>custentity_w9_received</object>
+      <object>custentity_porch_ven_pref_bu</object>
+      <object>customrecord_ncfar_asset.custrecord_ncfar_quantity</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistamount</object>
+      <object>custrecord_porch_bu_105</object>
+      <object>customrecord_stg_integraton_mapping.custrecord_tsg_integration_mapid</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdeprstartdate</object>
+      <object>custrecord_porch_bu_106</object>
+      <object>custrecord_porch_bu_107</object>
+      <object>custrecord_porch_bu_101</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_entity_file_format</object>
+      <object>customrecord_2663_entity_bank_details</object>
+      <object>custrecord_porch_bu_102</object>
+      <object>customrecord_ncfar_asset.custrecord_assetcurrentcost</object>
+      <object>customrecord_laa_lease_payment.custrecord_laa_lpa_payment_amount</object>
+      <object>custform_15_4125731_523</object>
+      <object>customrecord_ncfar_asset.custrecord_assetstatus</object>
+      <object>customrecord_ncfar_asset.custrecord_assetsubsidiary</object>
+      <object>customrecord_laa_lease_payment</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_initial_payment_amount</object>
+      <object>custrecord_porch_pl_ebs_field_pd</object>
+      <object>customrecord_ncfar_asset.custrecord_assetmainacc</object>
+      <object>custentity_porch_vb_limit</object>
+      <object>custbody_svb_vb_to_bell_dist_sched</object>
+      <object>custform_porch_vendor_bill</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_status</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistassettype</object>
+      <object>customrecord_laa_lease</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_term</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_lease_incentives</object>
+      <object>custform_atlas_ff_em_vendor_bill</object>
+      <object>customrecord_laa_lease_payment.custrecord_laa_lpa_effective_date</object>
+      <object>custform_porch_customer</object>
+      <object>custform_porch_interco_je</object>
+      <object>custentity_porch_ven_pref_department</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_type</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_9572_subsidiary</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_entity_bank_type</object>
+      <object>customrecord_ncfar_asset.custrecord_assettype</object>
+      <object>customrecord_stg_integraton_mapping</object>
+      <object>custentity_tax_classification</object>
+      <object>customrecord_laa_lease_payment.custrecord_laa_lpa_lease</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_entity_bank_no</object>
+      <object>custform_porch_cash_refund</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_entity_acct_no</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdescr</object>
+      <object>custform_porch_vendor</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhisttype</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_classification</object>
+      <object>custform_porch_cash</object>
+      <object>customrecord_ncfar_asset.custrecord_assetlastdeprdate</object>
+      <object>custform_laa_lease</object>
+      <object>custform_atlas_ff_em_bill_pmt</object>
+      <object>customrecord_ncfar_asset.custrecord_assetwriteoffacc</object>
+      <object>custbody_nsts_gaw_tran_requestor</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_initial_direct_costs</object>
+      <object>customrecord_ncfar_asset.custrecord_assetwritedownacc</object>
+      <object>customrole_porch_csv_integrator</object>
+      <object>custform_5_3776644_649</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdisposalacc</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_parent_vendor</object>
+      <object>customrecord_ncfar_asset</object>
+      <object>custentity_cus_tier_level</object>
+      <object>custentityporch_adp_id</object>
+      <object>custentity_porch_ven_distro</object>
+      <object>customrecord_ncfar_asset.custrecord_assetresidualvalue</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_vendor</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistmethod</object>
+      <object>custcol_sales_transaction_id</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistbookvalue</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistquantity</object>
+      <object>custform_porch_employee</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdepractive</object>
+      <object>customrecord_ncfar_deprhistory</object>
+      <object>customrecord_mapper_values.custrecord_mapper_value_isdefault</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_subsidiary</object>
+      <object>custbodyvend_bill_date_js</object>
+      <object>customrecord_laa_lease.custrecord_laa_ls_lease_prepaid_pmt</object>
+      <object>customrecord_laa_lease_payment.custrecord_laa_lpa_frequency</object>
+      <object>customrecord_ncfar_asset.custrecord_assetbookvalue</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistasset</object>
+      <object>custentity_vendor_payment_method</object>
+      <object>customrecord_ncfar_deprhistory.custrecord_deprhistsubsidiary</object>
+      <object>custform_porch_invoice</object>
+      <object>custform_16_4533432_893</object>
+      <object>customrecord_mapper_values.custrecord_mapper_value_inreport</object>
+      <object>customrecord_ncfar_asset.custrecord_assetdeprchargeacc</object>
+      <object>customrecord_mapper_values</object>
     </objects>
   </dependencies>
 </manifest>

@@ -3,8 +3,8 @@
   <columndelimiter>COMMA</columndelimiter>
   <datahandling>ADDUPDATE</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>Creates or updates the employee’s vendor record, for everything except the Vendor:External ID.  Used for incoming expense reports as vendor bills. This version is for the automatic upload via the CSV Uploader with data from the ADP export.&#xd;
-&#xd;
+  <description>Creates or updates the employee’s vendor record, for everything except the Vendor:External ID.  Used for incoming expense reports as vendor bills. This version is for the automatic upload via the CSV Uploader with data from the ADP export.&#xD;
+&#xD;
 v3: Default payment method = N/A</description>
   <entryform>[scriptid=custform_porch_vendor]</entryform>
   <ignorereadonly>T</ignorereadonly>
@@ -24,7 +24,7 @@ v3: Default payment method = N/A</description>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>F</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

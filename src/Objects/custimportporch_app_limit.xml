@@ -3,7 +3,7 @@
   <columndelimiter>COMMA</columndelimiter>
   <datahandling>UPDATE</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>This is for updating employee&apos;s VB approval limit</description>
+  <description>This is for updating employee's VB approval limit</description>
   <entryform>[scriptid=custform_porch_employee]</entryform>
   <ignorereadonly>T</ignorereadonly>
   <importname>Porch Manager Approval Limit</importname>
@@ -12,7 +12,7 @@
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
   <recordtype>EMPLOYEE</recordtype>
-  <runserversuitescript>F</runserversuitescript>
+  <runserversuitescript>T</runserversuitescript>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -21,7 +21,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>T</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

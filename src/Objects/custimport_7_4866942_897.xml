@@ -11,7 +11,7 @@
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
   <recordtype>PURCHASEORDER</recordtype>
-  <runserversuitescript>F</runserversuitescript>
+  <runserversuitescript>T</runserversuitescript>
   <transactionform>[scriptid=custform_porch_bill_payment]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
@@ -21,7 +21,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>T</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

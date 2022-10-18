@@ -3,7 +3,7 @@
   <columndelimiter>COMMA</columndelimiter>
   <datahandling>ADDUPDATE</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>FF Starter - Use this mapping to import this year&apos;s trial balance by month up to go-live date.</description>
+  <description>FF Starter - Use this mapping to import this year's trial balance by month up to go-live date.</description>
   <ignorereadonly>T</ignorereadonly>
   <importname>Trial Balance at Go-Live (Consol.) Import Mapping</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
@@ -21,7 +21,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>F</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

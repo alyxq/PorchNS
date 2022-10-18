@@ -35,45 +35,62 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
                 }
                 if(res['savedcsvimport']){
                     
-                    let importnames =[
-                        'Journal Entry Import Mapping' 
-                        ,'Trial Balance at Go-Live (Consol.) Import Mapping'
-                        ,'Historical Trial Balance (Consol.) Import Mapping'
-                    ]
+                    // let importnames =[
+                    //     'Journal Entry Import Mapping' 
+                    //     ,'Trial Balance at Go-Live (Consol.) Import Mapping'
+                    //     ,'Historical Trial Balance (Consol.) Import Mapping'
+                    // ]
 
                     let scriptid =res['savedcsvimport']['$']['scriptid']
                     let ssrcipt =res['savedcsvimport']['runserversuitescript'][0]
                     let importname =res['savedcsvimport']['importname'][0]
 
+                    console.log(importname)
+                    console.log(scriptid)
+                    console.log(ssrcipt)
+
+                    res["savedcsvimport"]['runserversuitescript'] ='T'
+
+                    globalUpdatedRecords.push(res)
+                    let xml =builder.buildObject(res)
+
+                    fs.writeFile(el, xml,  "utf-8", (err, data)=>{
+                        if(err){
+                            throw err
+                        }else{
+                            console.log('XML sucessfully updated', importname)
+                        }
+                    })
+
                     // delete res["savedcsvimport"]['somethingnewandfriendly']
-                    if (importnames.indexOf(importname) >=0){
+                    // if (importnames.indexOf(importname) >=0){
                         
-                        console.log(importname)
-                        console.log(scriptid)
-                        console.log(ssrcipt)
+                    //     console.log(importname)
+                    //     console.log(scriptid)
+                    //     console.log(ssrcipt)
 
-                        res["savedcsvimport"]['runserversuitescript'] ='T'
+                    //     res["savedcsvimport"]['runserversuitescript'] ='T'
 
-                        globalUpdatedRecords.push(res)
-                        let xml =builder.buildObject(res)
+                    //     globalUpdatedRecords.push(res)
+                    //     let xml =builder.buildObject(res)
 
-                        fs.writeFile(el, xml,  "utf-8", (err, data)=>{
-                            if(err){
-                                throw err
-                            }else{
-                                console.log('XML sucessfully updated', importname)
-                            }
-                        })
+                    //     fs.writeFile(el, xml,  "utf-8", (err, data)=>{
+                    //         if(err){
+                    //             throw err
+                    //         }else{
+                    //             console.log('XML sucessfully updated', importname)
+                    //         }
+                    //     })
 
-                    }else{
-                        fs.unlink(el, (err)=>{
-                            if(err){
-                                throw err
-                            }else{
-                                console.log('file deleted', scriptid)
-                            }
-                        })
-                    }
+                    // }else{
+                    //     fs.unlink(el, (err)=>{
+                    //         if(err){
+                    //             throw err
+                    //         }else{
+                    //             console.log('file deleted', scriptid)
+                    //         }
+                    //     })
+                    // }
                 }
             }
         })
@@ -81,6 +98,11 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
 
     globalUpdatedRecords.forEach((el, index)=>{
         console.log(el)
+    })
+    converter.json2csv(globalUpdatedRecords, (err, csv)=>{
+        if(err){throw err}
+        fs.writeFileSync('tester.csv', csv)
+
     })
 
 })

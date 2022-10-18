@@ -3,7 +3,7 @@
   <columndelimiter>COMMA</columndelimiter>
   <datahandling>UPDATE</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>Updating ADP ID for employee&apos;s listed as vendors</description>
+  <description>Updating ADP ID for employee's listed as vendors</description>
   <entryform>[scriptid=custform_porch_vendor]</entryform>
   <ignorereadonly>T</ignorereadonly>
   <importname>Porch_ADPID_Update_Vendor</importname>
@@ -13,7 +13,7 @@
   <overwritesublists>F</overwritesublists>
   <preventduplicates>F</preventduplicates>
   <recordtype>VENDOR</recordtype>
-  <runserversuitescript>F</runserversuitescript>
+  <runserversuitescript>T</runserversuitescript>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -22,7 +22,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>T</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>

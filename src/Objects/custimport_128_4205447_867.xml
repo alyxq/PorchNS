@@ -22,7 +22,7 @@
     <allroles>F</allroles>
     <globaledit>F</globaledit>
     <ispublic>F</ispublic>
-    <roles></roles>
+    <roles/>
   </audience>
   <filemappings>
     <filemapping>
@@ -69,7 +69,7 @@
         </fieldmapping>
         <fieldmapping>
           <field>ADDR2</field>
-          <value></value>
+          <value/>
         </fieldmapping>
         <fieldmapping>
           <field>ADDRESSEE</field>
