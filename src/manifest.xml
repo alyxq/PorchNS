@@ -1,0 +1,12 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>testProject</projectname>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="true">BUSINESS</feature>
+    </features>
+    <objects>
+      <object>custform_atlas_ff_em_amort_je</object>
+    </objects>
+  </dependencies>
+</manifest>
