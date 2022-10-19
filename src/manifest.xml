@@ -10,7 +10,6 @@
       <feature required="true">DEPARTMENTS</feature>
       <feature required="true">ACCOUNTING</feature>
       <feature required="true">PURCHASEORDERS</feature>
-      <feature required="true">INVENTORY</feature>
       <feature required="true">EXPREPORTS</feature>
       <feature required="true">SALESORDERS</feature>
       <feature required="true">CUSTOMRECORDS</feature>

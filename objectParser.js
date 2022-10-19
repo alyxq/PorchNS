@@ -20,10 +20,6 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
     file.forEach((el, index)=>{
 
         el =currdir +"/" +el
-        
-        // make app like paystand , versa pay
-        // make app like intergrator.io
-
         filesync =fs.readFileSync(el, 'utf-8', (err, text)=>{})
 
         parser.parseString(filesync, (err, res)=> {
@@ -34,12 +30,11 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
                     // console.log(res['savedsearch']['$']['scriptid'])
                 }
                 if(res['savedcsvimport']){
-                    
-                    // let importnames =[
-                    //     'Journal Entry Import Mapping' 
-                    //     ,'Trial Balance at Go-Live (Consol.) Import Mapping'
-                    //     ,'Historical Trial Balance (Consol.) Import Mapping'
-                    // ]
+                    let importnames =[
+                        'Journal Entry Import Mapping' 
+                        ,'Trial Balance at Go-Live (Consol.) Import Mapping'
+                        ,'Historical Trial Balance (Consol.) Import Mapping'
+                    ]
 
                     let scriptid =res['savedcsvimport']['$']['scriptid']
                     let ssrcipt =res['savedcsvimport']['runserversuitescript'][0]
@@ -49,6 +44,7 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
                     console.log(scriptid)
                     console.log(ssrcipt)
 
+                    // importFilter(importnames, importname, el, res)
                     res["savedcsvimport"]['runserversuitescript'] ='T'
 
                     globalUpdatedRecords.push(res)
@@ -61,36 +57,6 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
                             console.log('XML sucessfully updated', importname)
                         }
                     })
-
-                    // delete res["savedcsvimport"]['somethingnewandfriendly']
-                    // if (importnames.indexOf(importname) >=0){
-                        
-                    //     console.log(importname)
-                    //     console.log(scriptid)
-                    //     console.log(ssrcipt)
-
-                    //     res["savedcsvimport"]['runserversuitescript'] ='T'
-
-                    //     globalUpdatedRecords.push(res)
-                    //     let xml =builder.buildObject(res)
-
-                    //     fs.writeFile(el, xml,  "utf-8", (err, data)=>{
-                    //         if(err){
-                    //             throw err
-                    //         }else{
-                    //             console.log('XML sucessfully updated', importname)
-                    //         }
-                    //     })
-
-                    // }else{
-                    //     fs.unlink(el, (err)=>{
-                    //         if(err){
-                    //             throw err
-                    //         }else{
-                    //             console.log('file deleted', scriptid)
-                    //         }
-                    //     })
-                    // }
                 }
             }
         })
@@ -99,11 +65,41 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
     globalUpdatedRecords.forEach((el, index)=>{
         console.log(el)
     })
+
     converter.json2csv(globalUpdatedRecords, (err, csv)=>{
         if(err){throw err}
         fs.writeFileSync('tester.csv', csv)
-
     })
 
 })
-// console.log(globalUpdatedRecords)
+
+const importFilter =(importnames, importname, el, res)=>{
+    if (importnames.indexOf(importname) >=0){
+                        
+        console.log(importname)
+        console.log(scriptid)
+        console.log(ssrcipt)
+
+        res["savedcsvimport"]['runserversuitescript'] ='T'
+
+        globalUpdatedRecords.push(res)
+        let xml =builder.buildObject(res)
+
+        fs.writeFile(el, xml,  "utf-8", (err, data)=>{
+            if(err){
+                throw err
+            }else{
+                console.log('XML sucessfully updated', importname)
+            }
+        })
+
+    }else{
+        fs.unlink(el, (err)=>{
+            if(err){
+                throw err
+            }else{
+                console.log('file deleted', scriptid)
+            }
+        })
+    }
+}
