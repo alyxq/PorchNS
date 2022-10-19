@@ -1,0 +1,57 @@
+const fs =require('fs')
+const converter = require('json-2-csv')
+
+const readCSV =(dir)=>{
+    const stream = fs.createReadStream(dir);
+    const readline = require("readline");
+    const rl = readline.createInterface({ input: stream });
+    const inactiveids =[
+        'custimport_nsts_csvi_it_v2_1_0',
+        'custimport_1_4866942_897',
+        'custimport_3_4866942_897', 
+        'custimport_4_4866942_897',
+        'custimport_6_4866942_897',
+        'custimport_7_4866942_897',
+        'custimport_8_4866942_897',
+        'custimport_9_4866942_897',
+        'custimport_11_4866942_897',
+        'custimport_12_4866942_897',
+        'custimport_13_4866942_897',
+        'custimport_14_4866942_897',
+        'custimport_19_4866942_897',
+        'custimport_21_4866942_897',
+        'custimport_24_4866942_897',
+        'custimport_25_4866942_897',
+        'custimport_50_4205447_262'
+    ]
+    exports.inactiveUsers =inactiveids
+    let data = [];
+    
+    rl.on("line", (row) => {
+        rowdata =row.split(",")
+        let obj ={}
+        try{
+            if(inactiveids.indexOf(rowdata[10])>0){
+                obj.scriptid =rowdata[10]
+                obj.userName =rowdata[7]
+                obj.access =rowdata[12]
+                data.push(obj)
+                // console.log(obj)
+             }
+        }catch(e){
+            console.log(e)
+        }
+    });
+    
+    rl.on("close", () => {
+        console.log(data);
+        exports.data =data
+        converter.json2csv(data, (err, csv)=>{
+            if(err){throw err}
+            fs.writeFileSync('inactiveusers.csv', csv)
+        })
+        return data
+    });
+}
+
+readCSV('savedcsv_export.csv')

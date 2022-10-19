@@ -1,10 +1,11 @@
 const fs =require('fs')
 const path =require('path')
 const xml2js =require('xml2js');
-const converter = require('json-2-csv')
+const converter =require('json-2-csv')
+const {inactiveUsers} =require('./inactiveUsers');
+
 
 const parser =new xml2js.Parser();
-
 const builder =new xml2js.Builder({
     headless: true,
     allowSurrogateChars: true,
@@ -13,6 +14,39 @@ const builder =new xml2js.Builder({
 
 const currdir =path.join(__dirname, "src/objects")
 let globalUpdatedRecords =[]
+
+console.log(inactiveUsers)
+
+const importFilter =(importnames, importname, el, res)=>{
+    if (importnames.indexOf(importname) >=0){
+                        
+        console.log(importname)
+        console.log(scriptid)
+        console.log(ssrcipt)
+
+        res["savedcsvimport"]['runserversuitescript'] ='T'
+
+        globalUpdatedRecords.push(res)
+        let xml =builder.buildObject(res)
+
+        fs.writeFile(el, xml,  "utf-8", (err, data)=>{
+            if(err){
+                throw err
+            }else{
+                console.log('XML sucessfully updated', importname)
+            }
+        })
+
+    }else{
+        fs.unlink(el, (err)=>{
+            if(err){
+                throw err
+            }else{
+                console.log('file deleted', scriptid)
+            }
+        })
+    }
+}
 
 fs.readdir(currdir, 'utf-8', (error, file)=>{
     if(error){console.log(error)}
@@ -25,10 +59,6 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
         parser.parseString(filesync, (err, res)=> {
             if(err){console.log(err)}
             else{        
-                console.log(res)
-                if(res['savedsearch']){
-                    // console.log(res['savedsearch']['$']['scriptid'])
-                }
                 if(res['savedcsvimport']){
                     let importnames =[
                         'Journal Entry Import Mapping' 
@@ -63,7 +93,7 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
     }) 
 
     globalUpdatedRecords.forEach((el, index)=>{
-        console.log(el)
+        // console.log(el)
     })
 
     converter.json2csv(globalUpdatedRecords, (err, csv)=>{
@@ -72,34 +102,3 @@ fs.readdir(currdir, 'utf-8', (error, file)=>{
     })
 
 })
-
-const importFilter =(importnames, importname, el, res)=>{
-    if (importnames.indexOf(importname) >=0){
-                        
-        console.log(importname)
-        console.log(scriptid)
-        console.log(ssrcipt)
-
-        res["savedcsvimport"]['runserversuitescript'] ='T'
-
-        globalUpdatedRecords.push(res)
-        let xml =builder.buildObject(res)
-
-        fs.writeFile(el, xml,  "utf-8", (err, data)=>{
-            if(err){
-                throw err
-            }else{
-                console.log('XML sucessfully updated', importname)
-            }
-        })
-
-    }else{
-        fs.unlink(el, (err)=>{
-            if(err){
-                throw err
-            }else{
-                console.log('file deleted', scriptid)
-            }
-        })
-    }
-}
