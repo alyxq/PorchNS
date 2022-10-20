@@ -5,7 +5,7 @@
   <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
   <ignorereadonly>T</ignorereadonly>
-  <importname>ACS FAM Asset E78</importname>
+  <importname>FA import for all BU's</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
@@ -35,6 +35,14 @@
           <field>ALTNAME</field>
           <columnreference>
             <column>Name</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetaccmethod]</field>
+          <columnreference>
+            <column>Accounting Method</column>
             <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>
@@ -119,6 +127,14 @@
           <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlifetime]</field>
           <columnreference>
             <column>Asset Lifetime</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetpurchasedate]</field>
+          <columnreference>
+            <column>Purchase date</column>
             <file>CUSTOMRECORD</file>
             <type>NAME</type>
           </columnreference>

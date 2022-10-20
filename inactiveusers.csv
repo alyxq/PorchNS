@@ -1,17 +1,17 @@
-scriptid,userName,access
-custimport_7_4866942_897,Cathy Kuang,Public
-custimport_6_4866942_897,Cathy Kuang,Public
-custimport_9_4866942_897,Cathy Kuang,Public
-custimport_8_4866942_897,Cathy Kuang,Public
-custimport_3_4866942_897,Cathy Kuang,Public
-custimport_24_4866942_897,Cathy Kuang,Public
-custimport_1_4866942_897,Cathy Kuang,Public
-custimport_4_4866942_897,Cathy Kuang,Public
-custimport_25_4866942_897,Cathy Kuang,Public
-custimport_19_4866942_897,Cathy Kuang,Public
-custimport_14_4866942_897,Cathy Kuang,Public
-custimport_13_4866942_897,Cathy Kuang,Public
-custimport_12_4866942_897,Cathy Kuang,Public
-custimport_11_4866942_897,Cathy Kuang,Public
-custimport_21_4866942_897,Cathy Kuang,Public
-custimport_50_4205447_262,Jesse Groff,Private
+scriptid,userName,access,loginAccess
+custimport_25_4866942_897,Cathy Kuang,Private,false
+custimport_24_4866942_897,Cathy Kuang,Private,false
+custimport_21_4866942_897,Cathy Kuang,Private,false
+custimport_19_4866942_897,Cathy Kuang,Private,false
+custimport_50_4205447_262,Jesse Groff,Private,false
+custimport_14_4866942_897,Cathy Kuang,Private,false
+custimport_13_4866942_897,Cathy Kuang,Private,false
+custimport_12_4866942_897,Cathy Kuang,Private,false
+custimport_11_4866942_897,Cathy Kuang,Private,false
+custimport_9_4866942_897,Cathy Kuang,Private,false
+custimport_8_4866942_897,Cathy Kuang,Private,false
+custimport_7_4866942_897,Cathy Kuang,Private,false
+custimport_6_4866942_897,Cathy Kuang,Private,false
+custimport_4_4866942_897,Cathy Kuang,Private,false
+custimport_3_4866942_897,Cathy Kuang,Private,false
+custimport_1_4866942_897,Cathy Kuang,Private,false

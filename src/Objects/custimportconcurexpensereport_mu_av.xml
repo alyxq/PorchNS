@@ -38,12 +38,12 @@
         </fieldmapping>
         <fieldmapping>
           <field>[scriptid=custbody_nsts_gaw_tran_requestor]</field>
-          <value>462869</value>
+          <value>15735</value>
         </fieldmapping>
         <fieldmapping>
           <field>[scriptid=custbodyvend_bill_date_js]</field>
           <columnreference>
-            <column>Report Submit Date</column>
+            <column>DATE</column>
             <file>VENDORBILL</file>
             <type>NAME</type>
           </columnreference>
@@ -74,7 +74,7 @@
         </fieldmapping>
         <fieldmapping>
           <field>TRANDATE</field>
-          <value>9/28/2022</value>
+          <value>9/9/2022</value>
         </fieldmapping>
         <fieldmapping>
           <field>TRANID</field>

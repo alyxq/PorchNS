@@ -73,14 +73,6 @@
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>ENTITY</field>
-          <columnreference>
-            <column>Name</column>
-            <file>ADVINTERCOMPANYJOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
           <field>LINESUBSIDIARY</field>
           <columnreference>
             <column>Line Subsidiary Internal ID</column>

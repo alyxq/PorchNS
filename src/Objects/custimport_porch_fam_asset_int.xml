@@ -1,0 +1,219 @@
+<savedcsvimport scriptid="custimport_porch_fam_asset_int">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <customrecord>[scriptid=customrecord_ncfar_asset]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>To bulk create intangible fixed assets</description>
+  <entryform>[scriptid=custform_porch_fam_asst_form_js]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>FAM Asset - Intangibles</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles/>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ALTNAME</field>
+          <columnreference>
+            <column>Name</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetbookvalue]</field>
+          <columnreference>
+            <column>Current Net Book Value</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetcost]</field>
+          <columnreference>
+            <column>Asset Original Cost</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetcurrentage]</field>
+          <columnreference>
+            <column>Last Depreciation Period</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetcurrentcost]</field>
+          <columnreference>
+            <column>Asset Current Cost</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdepartment]</field>
+          <columnreference>
+            <column>Department Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdepracc]</field>
+          <columnreference>
+            <column>Depr Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdeprchargeacc]</field>
+          <columnreference>
+            <column>Depr Charge Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdeprstartdate]</field>
+          <columnreference>
+            <column>Depreciation Start Date</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdescr]</field>
+          <columnreference>
+            <column>Asset Description</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetdisposalacc]</field>
+          <columnreference>
+            <column>Disposal Cost Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlastdepramt]</field>
+          <columnreference>
+            <column>Last Depreciation Amount</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlastdeprdate]</field>
+          <columnreference>
+            <column>Last Depreciation Date</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetlifetime]</field>
+          <columnreference>
+            <column>Asset Lifetime</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetmainacc]</field>
+          <columnreference>
+            <column>Asset Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetphysicallocn]</field>
+          <columnreference>
+            <column>Physical Location</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetresidualvalue]</field>
+          <value>0.00</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetstatus]</field>
+          <columnreference>
+            <column>Asset Status</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetsubsidiary]</field>
+          <columnreference>
+            <column>Internal ID (sub)</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assettype]</field>
+          <columnreference>
+            <column>Asset Type</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetwritedownacc]</field>
+          <columnreference>
+            <column>Write Down Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_assetwriteoffacc]</field>
+          <columnreference>
+            <column>Write Off Acct Internal ID</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ncfar_asset.custrecord_ncfar_quantity]</field>
+          <columnreference>
+            <column>Quantity</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

@@ -35,6 +35,7 @@ const readCSV =(dir)=>{
                 obj.scriptid =rowdata[10]
                 obj.userName =rowdata[7]
                 obj.access =rowdata[12]
+                obj.loginAccess =false
                 data.push(obj)
                 // console.log(obj)
              }
@@ -54,4 +55,4 @@ const readCSV =(dir)=>{
     });
 }
 
-readCSV('savedcsv_export.csv')
+readCSV('prod_savedcsv_export.csv')

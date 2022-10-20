@@ -1,0 +1,175 @@
+<savedcsvimport scriptid="custimport_284_4205447_672">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <entryform>[scriptid=custform_porch_vendor]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>HaH Vendor Import - E78</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>VENDOR</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles/>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>VENDOR</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>VENDOR</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>COMPANYNAME</field>
+          <columnreference>
+            <column>Company Name</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_default_appvr_js]</field>
+          <columnreference>
+            <column>Business Approver</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_porch_ven_pref_department]</field>
+          <columnreference>
+            <column>Dept Internal ID</column>
+            <file>VENDOR</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_vendor_payment_method]</field>
+          <columnreference>
+            <column>Payment Type</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITYID</field>
+          <columnreference>
+            <column>Vendor ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXPENSEACCOUNT</field>
+          <columnreference>
+            <column>Default expense account external ID</column>
+            <file>VENDOR</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>FIRSTNAME</field>
+          <columnreference>
+            <column>First Name</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>IS1099ELIGIBLE</field>
+          <columnreference>
+            <column>Track 1099</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ISPERSON</field>
+          <columnreference>
+            <column>Is Individual</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LASTNAME</field>
+          <columnreference>
+            <column>Last Name</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>46</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>VENDOR:ADDRESSBOOK:ADDRESSBOOKADDRESS</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ADDR1</field>
+          <columnreference>
+            <column>Billing address 1</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CITY</field>
+          <columnreference>
+            <column>Billing city</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>COUNTRY</field>
+          <columnreference>
+            <column>Billing country</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>STATE</field>
+          <columnreference>
+            <column>Billing state</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ZIP</field>
+          <columnreference>
+            <column>Billing ZIP code</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

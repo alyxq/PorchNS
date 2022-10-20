@@ -4,7 +4,6 @@ const xml2js =require('xml2js');
 const converter =require('json-2-csv')
 const {inactiveUsers} =require('./inactiveUsers');
 
-
 const parser =new xml2js.Parser();
 const builder =new xml2js.Builder({
     headless: true,

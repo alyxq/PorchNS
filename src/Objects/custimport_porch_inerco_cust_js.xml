@@ -40,7 +40,7 @@
         <fieldmapping>
           <field>COMPANYNAME</field>
           <columnreference>
-            <column>Name</column>
+            <column>Company Name</column>
             <file>CUSTOMER</file>
             <type>NAME</type>
           </columnreference>
@@ -72,7 +72,7 @@
         <fieldmapping>
           <field>REPRESENTINGSUBSIDIARY</field>
           <columnreference>
-            <column>Represents Subsidiary Internal ID</column>
+            <column>Represents Subsidiary</column>
             <file>CUSTOMER</file>
             <type>INTERNAL_ID</type>
           </columnreference>
@@ -80,14 +80,14 @@
         <fieldmapping>
           <field>SUBSIDIARY</field>
           <columnreference>
-            <column>Subsidiary Internal ID</column>
+            <column>Subsidiary</column>
             <file>CUSTOMER</file>
             <type>INTERNAL_ID</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>TERMS</field>
-          <value>4</value>
+          <value>2</value>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>

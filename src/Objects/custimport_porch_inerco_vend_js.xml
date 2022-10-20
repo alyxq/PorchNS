@@ -50,6 +50,10 @@
           <value>1</value>
         </fieldmapping>
         <fieldmapping>
+          <field>[scriptid=custentity_vendor_payment_method]</field>
+          <value>10</value>
+        </fieldmapping>
+        <fieldmapping>
           <field>ENTITYID</field>
           <columnreference>
             <column>Vendor ID</column>
@@ -68,7 +72,7 @@
         <fieldmapping>
           <field>REPRESENTINGSUBSIDIARY</field>
           <columnreference>
-            <column>Represents Subsidiary Internal ID</column>
+            <column>Represents Subsidiary</column>
             <file>VENDOR</file>
             <type>INTERNAL_ID</type>
           </columnreference>
@@ -76,7 +80,7 @@
         <fieldmapping>
           <field>SUBSIDIARY</field>
           <columnreference>
-            <column>Subsidiary Internal ID</column>
+            <column>Subsidiary</column>
             <file>VENDOR</file>
             <type>INTERNAL_ID</type>
           </columnreference>

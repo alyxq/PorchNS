@@ -10,7 +10,6 @@
       <feature required="true">DEPARTMENTS</feature>
       <feature required="true">ACCOUNTING</feature>
       <feature required="true">PURCHASEORDERS</feature>
-      <feature required="true">EXPREPORTS</feature>
       <feature required="true">SALESORDERS</feature>
       <feature required="true">CUSTOMRECORDS</feature>
       <feature required="true">SUBSIDIARIES</feature>
@@ -20,6 +19,7 @@
       <object>customrecord_ncfar_asset.custrecord_assetlastdepramt</object>
       <object>custbody_auto_approve</object>
       <object>custform_atlas_ff_em_amort_je</object>
+      <object>custbody1</object>
       <object>customrecord_ncfar_asset.custrecord_assetdepracc</object>
       <object>custform_atlas_ff_em_vendor</object>
       <object>custentity_customer_number</object>
@@ -61,6 +61,8 @@
       <object>customrecord_ncfar_asset.custrecord_assetcurrentcost</object>
       <object>customrecord_laa_lease_payment.custrecord_laa_lpa_payment_amount</object>
       <object>custform_15_4125731_523</object>
+      <object>customrecord_ncfar_asset.custrecord_assetpurchasedate</object>
+      <object>custentity_porch_default_appvr_js</object>
       <object>customrecord_ncfar_asset.custrecord_assetstatus</object>
       <object>customrecord_ncfar_asset.custrecord_assetsubsidiary</object>
       <object>customrecord_laa_lease_payment</object>
@@ -72,6 +74,7 @@
       <object>custform_porch_vendor_bill</object>
       <object>customrecord_laa_lease.custrecord_laa_ls_status</object>
       <object>customrecord_ncfar_deprhistory.custrecord_deprhistassettype</object>
+      <object>custform_206_4205447_322</object>
       <object>customrecord_laa_lease</object>
       <object>customrecord_laa_lease.custrecord_laa_ls_term</object>
       <object>customrecord_laa_lease.custrecord_laa_ls_lease_incentives</object>
@@ -79,6 +82,7 @@
       <object>customrecord_laa_lease_payment.custrecord_laa_lpa_effective_date</object>
       <object>custform_porch_customer</object>
       <object>custform_porch_interco_je</object>
+      <object>customrecord_ncfar_asset.custrecord_assetaccmethod</object>
       <object>custentity_porch_ven_pref_department</object>
       <object>customrecord_laa_lease.custrecord_laa_ls_type</object>
       <object>customrecord_2663_entity_bank_details.custrecord_9572_subsidiary</object>
@@ -116,9 +120,11 @@
       <object>custcol_sales_transaction_id</object>
       <object>customrecord_ncfar_deprhistory.custrecord_deprhistbookvalue</object>
       <object>customrecord_ncfar_deprhistory.custrecord_deprhistquantity</object>
+      <object>custform_porch_fam_asst_form_js</object>
       <object>custform_porch_employee</object>
       <object>customrecord_ncfar_asset.custrecord_assetdepractive</object>
       <object>customrecord_ncfar_deprhistory</object>
+      <object>custform_porch_cus_payment</object>
       <object>customrecord_mapper_values.custrecord_mapper_value_isdefault</object>
       <object>customrecord_laa_lease.custrecord_laa_ls_subsidiary</object>
       <object>custbodyvend_bill_date_js</object>
@@ -126,12 +132,14 @@
       <object>customrecord_laa_lease_payment.custrecord_laa_lpa_frequency</object>
       <object>customrecord_ncfar_asset.custrecord_assetbookvalue</object>
       <object>customrecord_ncfar_deprhistory.custrecord_deprhistasset</object>
+      <object>custentity_porch_defalt_sub_js</object>
       <object>custentity_vendor_payment_method</object>
       <object>customrecord_ncfar_deprhistory.custrecord_deprhistsubsidiary</object>
       <object>custform_porch_invoice</object>
       <object>custform_16_4533432_893</object>
       <object>customrecord_mapper_values.custrecord_mapper_value_inreport</object>
       <object>customrecord_ncfar_asset.custrecord_assetdeprchargeacc</object>
+      <object>customrecord_ncfar_asset.custrecord_assetphysicallocn</object>
       <object>customrecord_mapper_values</object>
     </objects>
   </dependencies>

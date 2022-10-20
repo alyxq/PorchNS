@@ -1,16 +1,17 @@
-<savedcsvimport scriptid="custimport_nsts_csvi_it_v2_1_0">
+<savedcsvimport scriptid="custimport_158_4205447_578">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADD</datahandling>
-  <decimaldelimiter>COMMA</decimaldelimiter>
-  <entryform>STANDARDINVENTORYPARTFORM</entryform>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <entryform>[scriptid=custform_porch_vendor]</entryform>
   <ignorereadonly>T</ignorereadonly>
-  <importname>CSV Integrator : Inventory Item</importname>
+  <importname>Print on Check As - Name Update</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>DESCRIPTIONITEM</recordtype>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>VENDOR</recordtype>
   <runserversuitescript>T</runserversuitescript>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
@@ -24,18 +25,26 @@
   </audience>
   <filemappings>
     <filemapping>
-      <file>DESCRIPTIONITEM</file>
+      <file>VENDOR</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>DESCRIPTIONITEM</record>
+      <record>VENDOR</record>
       <fieldmappings>
         <fieldmapping>
-          <field>ITEMID</field>
+          <field>ID</field>
           <columnreference>
-            <column>Item</column>
-            <file>DESCRIPTIONITEM</file>
+            <column>Internal ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PRINTONCHECKAS</field>
+          <columnreference>
+            <column>Company Name</column>
+            <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

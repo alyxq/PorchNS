@@ -5,7 +5,7 @@
   <decimaldelimiter>PERIOD</decimaldelimiter>
   <description>Update External ID to match Account Number</description>
   <ignorereadonly>T</ignorereadonly>
-  <importname>COA - EXTERNAL ID UPDATE</importname>
+  <importname>Natural Account External ID Update</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
@@ -34,7 +34,7 @@
         <fieldmapping>
           <field>EXTERNALID</field>
           <columnreference>
-            <column>Number</column>
+            <column>External ID</column>
             <file>ACCOUNT</file>
             <type>NAME</type>
           </columnreference>

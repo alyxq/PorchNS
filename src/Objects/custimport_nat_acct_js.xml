@@ -1,7 +1,7 @@
 <savedcsvimport scriptid="custimport_nat_acct_js">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
   <description>Use this to add, update or inactivate a Natural Account.</description>
   <ignorereadonly>T</ignorereadonly>
@@ -19,7 +19,7 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>T</ispublic>
+    <ispublic>F</ispublic>
     <roles/>
   </audience>
   <filemappings>
@@ -125,7 +125,11 @@
         </fieldmapping>
         <fieldmapping>
           <field>INCLUDECHILDREN</field>
-          <value>T</value>
+          <columnreference>
+            <column>includeChildren</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>ISINACTIVE</field>
@@ -153,7 +157,11 @@
         </fieldmapping>
         <fieldmapping>
           <field>SUBSIDIARY</field>
-          <value>18</value>
+          <columnreference>
+            <column>subsidiaries Internal ID</column>
+            <file>ACCOUNT</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>TRANDATE</field>

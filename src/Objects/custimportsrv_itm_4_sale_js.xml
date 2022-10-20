@@ -1,0 +1,125 @@
+<savedcsvimport scriptid="custimportsrv_itm_4_sale_js">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>Use this form to add new service items for sale.</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Service_Items_For_Sale_JS</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>SERVICESALEITEM</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles/>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>SERVICESALEITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>SERVICESALEITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>CLASS</field>
+          <columnreference>
+            <column>Product Line</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <columnreference>
+            <column>Department</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DISPLAYNAME</field>
+          <columnreference>
+            <column>Display Name/Code</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>INCLUDECHILDREN</field>
+          <columnreference>
+            <column>Include Children</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ISINACTIVE</field>
+          <columnreference>
+            <column>Inactive</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEMID</field>
+          <columnreference>
+            <column>Item Name/Number</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SALESDESCRIPTION</field>
+          <columnreference>
+            <column>Sales Description</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <columnreference>
+            <column>Subsidiary_Internal ID</column>
+            <file>SERVICESALEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TAXSCHEDULE</field>
+          <columnreference>
+            <column>Tax Schedule</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNITSTYPE</field>
+          <columnreference>
+            <column>Units Type</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

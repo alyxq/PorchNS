@@ -18,7 +18,7 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>T</ispublic>
+    <ispublic>F</ispublic>
     <roles/>
   </audience>
   <filemappings>

@@ -19,7 +19,7 @@
     <allemployees>F</allemployees>
     <allpartners>F</allpartners>
     <allroles>F</allroles>
-    <globaledit>T</globaledit>
+    <globaledit>F</globaledit>
     <ispublic>T</ispublic>
     <roles/>
   </audience>
@@ -32,22 +32,6 @@
     <recordmapping>
       <record>JOURNALENTRY</record>
       <fieldmappings>
-        <fieldmapping>
-          <field>[scriptid=custbody7]</field>
-          <columnreference>
-            <column>Requestor</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>[scriptid=custbody_nsts_gaw_tran_requestor]</field>
-          <columnreference>
-            <column>Requestor</column>
-            <file>JOURNALENTRY</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
         <fieldmapping>
           <field>EXTERNALID</field>
           <columnreference>

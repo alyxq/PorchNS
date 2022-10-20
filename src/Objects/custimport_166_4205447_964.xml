@@ -1,17 +1,17 @@
-<savedcsvimport scriptid="custimport_nsts_csvi_er_v2_1_0">
+<savedcsvimport scriptid="custimport_166_4205447_964">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
-  <decimaldelimiter>COMMA</decimaldelimiter>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
   <ignorereadonly>T</ignorereadonly>
-  <importname>CSV Integrator : Expense Report</importname>
+  <importname>Rynoh Invoice Update FINAL</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
   <overwritesublists>F</overwritesublists>
-  <recordtype>EXPENSEREPORT</recordtype>
+  <recordtype>INVOICE</recordtype>
   <runserversuitescript>T</runserversuitescript>
-  <transactionform>STANDARDEXPENSEREPORT</transactionform>
+  <transactionform>[scriptid=custform_porch_invoice]</transactionform>
   <usemultithread>F</usemultithread>
   <validatemandatorycustfields>T</validatemandatorycustfields>
   <audience>
@@ -19,52 +19,51 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>F</ispublic>
+    <ispublic>T</ispublic>
     <roles/>
   </audience>
   <filemappings>
     <filemapping>
-      <file>EXPENSEREPORT</file>
+      <file>INVOICE</file>
     </filemapping>
   </filemappings>
   <recordmappings>
     <recordmapping>
-      <record>EXPENSEREPORT</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>ENTITY</field>
-          <columnreference>
-            <column>Employee</column>
-            <file>EXPENSEREPORT</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>EXTERNALID</field>
-          <columnreference>
-            <column>External ID</column>
-            <file>EXPENSEREPORT</file>
-            <type>NAME</type>
-          </columnreference>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>EXPENSEREPORT:EXPENSE</record>
+      <record>INVOICE:ITEM</record>
       <fieldmappings>
         <fieldmapping>
           <field>AMOUNT</field>
           <columnreference>
-            <column>Amount_1</column>
-            <file>EXPENSEREPORT</file>
+            <column>Amount</column>
+            <file>INVOICE</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CATEGORY</field>
+          <field>CLASS</field>
+          <value/>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <value>103</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DESCRIPTION</field>
           <columnreference>
-            <column>Category_1</column>
-            <file>EXPENSEREPORT</file>
+            <column>Memo</column>
+            <file>INVOICE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEM</field>
+          <value>1046</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ORDERLINE</field>
+          <columnreference>
+            <column>Line ID</column>
+            <file>INVOICE</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
@@ -72,15 +71,28 @@
           <field>QUANTITY</field>
           <columnreference>
             <column>Quantity</column>
-            <file>EXPENSEREPORT</file>
+            <file>INVOICE</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>RATE</field>
           <columnreference>
-            <column>Rate</column>
-            <file>EXPENSEREPORT</file>
+            <column>Item Rate</column>
+            <file>INVOICE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>INVOICE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ID</field>
+          <columnreference>
+            <column>Invoice Internal ID</column>
+            <file>INVOICE</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>

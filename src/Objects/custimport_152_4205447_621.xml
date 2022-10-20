@@ -1,12 +1,11 @@
-<savedcsvimport scriptid="custimportporch_add_upd_vend_js">
+<savedcsvimport scriptid="custimport_152_4205447_621">
   <charencoding>windows-1252</charencoding>
   <columndelimiter>COMMA</columndelimiter>
-  <datahandling>ADDUPDATE</datahandling>
+  <datahandling>ADD</datahandling>
   <decimaldelimiter>PERIOD</decimaldelimiter>
-  <description>Use this to add or update vendor information, for everything except External ID</description>
   <entryform>[scriptid=custform_porch_vendor]</entryform>
   <ignorereadonly>T</ignorereadonly>
-  <importname>Porch_Add_Update_Vendor</importname>
+  <importname>Floify - Vendor Import</importname>
   <logsystemnotescustfields>F</logsystemnotescustfields>
   <multiselectdelimiter>|</multiselectdelimiter>
   <overwritemissingfields>F</overwritemissingfields>
@@ -21,7 +20,7 @@
     <allpartners>F</allpartners>
     <allroles>F</allroles>
     <globaledit>F</globaledit>
-    <ispublic>T</ispublic>
+    <ispublic>F</ispublic>
     <roles/>
   </audience>
   <filemappings>
@@ -36,67 +35,62 @@
         <fieldmapping>
           <field>COMPANYNAME</field>
           <columnreference>
-            <column>Vendor name</column>
+            <column>Vendor</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>CURRENCY</field>
-          <value>1</value>
+          <field>[scriptid=custentity_porch_defalt_sub_js]</field>
+          <value>39</value>
         </fieldmapping>
         <fieldmapping>
           <field>[scriptid=custentity_porch_ven_pref_department]</field>
-          <columnreference>
-            <column>Dept</column>
-            <file>VENDOR</file>
-            <type>NAME</type>
-          </columnreference>
+          <value>103</value>
         </fieldmapping>
         <fieldmapping>
           <field>[scriptid=custentity_vendor_payment_method]</field>
+          <value>10</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EMAIL</field>
           <columnreference>
-            <column>Payment Type</column>
+            <column>Email</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>EXPENSEACCOUNT</field>
+          <field>ENTITYID</field>
           <columnreference>
-            <column>Account number</column>
-            <file>VENDOR</file>
-            <type>EXTERNAL_ID</type>
-          </columnreference>
-        </fieldmapping>
-        <fieldmapping>
-          <field>IS1099ELIGIBLE</field>
-          <columnreference>
-            <column>Track 1099</column>
+            <column>Vendor ID</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
-          <field>PAYABLESACCOUNT</field>
-          <value>112</value>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ISPERSON</field>
+          <value>F</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PHONE</field>
+          <columnreference>
+            <column>Phone</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>SUBSIDIARY</field>
-          <value>17</value>
-        </fieldmapping>
-      </fieldmappings>
-    </recordmapping>
-    <recordmapping>
-      <record>VENDOR:ADDRESSBOOK</record>
-      <fieldmappings>
-        <fieldmapping>
-          <field>DEFAULTBILLING</field>
-          <value>T</value>
-        </fieldmapping>
-        <fieldmapping>
-          <field>LABEL</field>
-          <value>Main Pay</value>
+          <value>39</value>
         </fieldmapping>
       </fieldmappings>
     </recordmapping>
@@ -106,7 +100,7 @@
         <fieldmapping>
           <field>ADDR1</field>
           <columnreference>
-            <column>Billing address</column>
+            <column>Street Address</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
@@ -114,19 +108,23 @@
         <fieldmapping>
           <field>CITY</field>
           <columnreference>
-            <column>Billing city</column>
+            <column>City</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>COUNTRY</field>
-          <value>US</value>
+          <columnreference>
+            <column>Country</column>
+            <file>VENDOR</file>
+            <type>NAME</type>
+          </columnreference>
         </fieldmapping>
         <fieldmapping>
           <field>STATE</field>
           <columnreference>
-            <column>Billing state</column>
+            <column>State</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
@@ -134,7 +132,7 @@
         <fieldmapping>
           <field>ZIP</field>
           <columnreference>
-            <column>Billing ZIP code</column>
+            <column>Zip</column>
             <file>VENDOR</file>
             <type>NAME</type>
           </columnreference>
